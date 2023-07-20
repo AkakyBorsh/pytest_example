@@ -1,7 +1,6 @@
 requests~=2.25.1
 pytest==6.2.3
 allure-pytest==2.8.40
--e ./utils/example_service_client
 assertpy~=1.1
 setuptools~=54.2.0
 curlify~=2.2.1

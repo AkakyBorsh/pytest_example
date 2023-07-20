@@ -14,5 +14,4 @@ def test_create_post(example_service_client, faker):
 
     assert_that(res).extracting('title').contains(req.title)
     assert_that(res).extracting('userId').contains(req.userId)
-    assert_that(res).extracting('userId').contains(req.userId)
     assert_that(res).extracting('body').contains(req.body)
