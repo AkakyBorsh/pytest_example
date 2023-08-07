@@ -12,5 +12,9 @@ docker run -d pytest_example sleep infinity
 
 > docker run --name habr-pg-13.3 -p 5432:5432 -e POSTGRES_USER=habrpguser -e POSTGRES_PASSWORD=pgpwd4habr -e POSTGRES_DB=habrdb -d -v "/Users/ivahrusev/src/useful-sql-scripts/running_pg_in_docker/2. Init Database":/docker-entrypoint-initdb.d postgres:13.3
 
+> docker run --name habr-pg-13.3 -p 5433:5433 -e POSTGRES_USER=habrpguser -e POSTGRES_PASSWORD=pgpwd4habr -e POSTGRES_DB=habrdb -d postgres:13.3
+
+
 # postgres with data set 
 > docker run -d --name pg-ds-dellstore -p 5432:5432 -e POSTGRES_USER=habrpguser -e POSTGRES_PASSWORD=pgpwd4habr aa8y/postgres-dataset:dellstore
+
