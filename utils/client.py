@@ -25,16 +25,9 @@ class Client:
         self.host = host
         self.session = Session()
         self.posts = PostsApi(host=self.host, session=self.session)
-        # не добавляется лог при упавшем запросе (при 404)
-        self.session.hooks['response'] = [check_status, log_response]
+        self.session.hooks['response'] = [log_response, check_status]
 
 
 if __name__ == '__main__':
     client = Client("https://jsonplaceholder.typicode.com/asd/asd")
     print(client.posts.host)
-
-# todo как написать плагин к пайтесту
-# todo библиотеки для ассертов (assertpy)
-# todo библиотека Faker
-# todo примеры использования allure
-# todo setupPy что такое и как использовать
